@@ -1,0 +1,86 @@
+:root{
+    --vw-13--: 13vw;
+}
+button {
+    background-color: lightseagreen;
+    border: 0;
+    font-size: large;
+}
+button:hover {
+    background-color: lightcoral;
+}
+#header {
+    box-shadow: 0px 3px 2px grey;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+#header > h1,
+#header > p {
+    margin-bottom: 15px;
+}
+#header-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#header-bottom > * {
+    padding: 5px 20px;
+    background-color: lightseagreen;
+}
+#header-bottom > button:hover {
+    box-shadow: 3px 3px 2px 
+    lightcoral;
+}
+
+#content {text-align: center;
+    justify-content: center;
+}
+#content > p {
+    color: lightcoral;
+    font-size: larger;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+#startBtn{
+    color: lightcoral;
+    background-color: white;
+    font-size: 100px;
+    margin-top: 50px;
+}
+#startBtn:hover {
+    color: lightseagreen;
+    text-shadow: 5px 5px 3px grey;
+}
+#startBtn.hide {
+    display: none;
+}
+#gameBoard {
+    justify-content: center;
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(3,var(--vw-13--));
+    grid-template-rows: repeat(3,var(--vw-13--));
+    transform: scale(0);
+}
+#gameBoard.active {
+    transform: scale(1);
+    transition: transform 0.8s;
+}
+#gameBoard > div {
+    font-size: var(--vw-13--);
+    background-color: lightcoral;
+    /* textContent center vertically and horizontally in div*/
+    text-align: center;
+    vertical-align: middle;
+    line-height: var(--vw-13--);
+}
+
+#gameBoard > div:hover {
+    transform: scale(0.95);
+    box-shadow: 3px 3px 2px grey;
+}
+/* div#gameBoard > div.filled {
+    box-shadow: 3px 3px 2px lightseagreen;
+} */
